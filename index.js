@@ -70,7 +70,7 @@ async function start() {
     try {
         const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
         const { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(`🤖KERM_MD-V3 using WA v${version.join('.')}, isLatest: ${isLatest}`);
+        console.log(`🤖 KERM_MD-V3 using WA v${version.join('.')}, isLatest: ${isLatest}`);
         
         const Matrix = makeWASocket({
             version,
@@ -95,8 +95,8 @@ async function start() {
                 }
             } else if (connection === 'open') {
                 if (initialConnection) {
-                    console.log(chalk.green("Successful Connected To Kerm V3✅😍"));
-                    Matrix.sendMessage(Matrix.user.id, { text: `𝖪𝖤𝖱𝖬 𝖬𝖣 𝖵𝟥 𝖨𝖲 𝖢𝖮𝖭𝖭𝖤𝖢𝖳𝖤𝖣✅\n𝖣𝖮𝖭’𝖳 𝖥𝖮𝖱𝖦𝖤𝖳 𝖳𝖮 𝖩𝖮𝖨𝖭 𝖢𝖧𝖠𝖭𝖭𝖤𝖫.` });
+                    console.log(chalk.green("Kerm Md V3 Is successfull connected ✅"));
+                    Matrix.sendMessage(Matrix.user.id, { text: `KERM MD V3 IS CONNECTED\nDON'T FORGET TO JOIN CHANNEL😎` });
                     initialConnection = false;
                 } else {
                     console.log(chalk.blue("♻️ Connection reestablished after restart."));
